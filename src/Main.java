@@ -1,7 +1,3 @@
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
 import java.util.Scanner;
 
 import static java.lang.System.*;
@@ -13,15 +9,21 @@ public class Main {
         String inputString = scanner.nextLine();
         char[] charArray = inputString.toCharArray();
         int inputStringLenght = inputString.length();
+
+        StringBuilder SB = new StringBuilder(inputString);
+        out.println("SB reverse " + SB.reverse());
+        out.print("char forward ");
         for (char c: charArray) {
             out.print(c);
         }
         out.println();
-        out.println(inputStringLenght);
-        //  out.println("s");
+        out.println("String lenght " + inputStringLenght);
+
+        out.print("char reverse ");
         for (int i = inputStringLenght; i > 0; i--)
             out.print(charArray[i-1]);
         out.println();
+
         out.println("End of program");
     }
 }
